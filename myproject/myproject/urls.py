@@ -22,6 +22,4 @@ urlpatterns = [
     path('', breadcat.views.home, name="home"),
     path('create/', breadcat.views.create, name="create"),
     path('detail/', breadcat.views.detail, name="detail"),
-    path('update/', breadcat.views.update, name="update"),
-
 ]

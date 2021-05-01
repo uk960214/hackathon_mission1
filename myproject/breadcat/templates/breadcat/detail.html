@@ -1,0 +1,57 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>샌드위치1</title>
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+</head>
+<body>
+    <header>
+        <h1>BreadCat</h1>
+    </header>
+    
+    <section class="main">
+        <section class="ingredient top-bread">
+            <div class="img-box">
+                <img src="{% static 'img/bread-top.png' %}" alt="sliced-bread">
+            </div>
+            <div class="entry dummy"></div>
+        </section>
+        {% for post in post_list %}
+            <section class="ingredient filling">
+                <div class="img-box">
+                    {% if post.ingredient == 'bacon' %}
+                        <img src="{% static 'img/bacon.png' %}" alt="bacon">
+                    {% elif post.ingredient == 'basil' %}
+                        <img src="{% static 'img/basil.png' %}" alt="basil">
+                    {% elif post.ingredient == 'cheese' %}
+                        <img src="{% static 'img/cheese.png' %}" alt="cheese">
+                    {% elif post.ingredient == 'tomato' %}
+                        <img src="{% static 'img/tomato.png' %}" alt="tomato"> 
+                    {% endif %}
+                </div>
+                <div class="entry">
+                    <h5 class="title">
+                        Question: {{ post.question }}
+                    </h5>
+                    <p>{{post.date}}</p>
+                    <p class="content">
+                        Answer: {{post.answer|linebreaks}}
+                    </p>
+                    <input type="button" value="update">
+                    <input type="button" value="delete">
+                </div>
+            </section>
+        {% endfor %}
+        
+        <section class="ingredient bottom-bread">
+            <div class="img-box">
+                <img src="{% static 'img/bread-bottom.png' %}" alt="sliced-bread">
+            </div>
+            <div class="entry dummy"></div>     
+        </section>
+    </section>
+    <a href="{% url 'create' %}">Add ingredient</a>
+    
+</body>

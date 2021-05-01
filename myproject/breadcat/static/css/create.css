@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box
+}
+@font-face {
+    font-family: 'BinggraeSamanco-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '777Balsamtint';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background-color: white;
+}
+header{
+    height: 80px;
+    background-color:#FFD758;
+    color: #965562;
+    font-family: 'BinggraeSamanco-Bold';
+    font-size: 30px;
+    text-align: center;
+}
+main {
+    height: 1000px;
+    width: 1200px;
+    background-color: white;
+    margin: 0 auto;
+}
+#top{
+    height:200px;
+    background-color:white;
+    margin-bottom: 40px;
+    color: #965562;
+    font-family: 'BinggraeSamanco-Bold';
+    font-size: 40px;
+    text-align: center;
+}
+#container{
+    height: 700px;
+    background-color:#FFFFDC;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: #965562;
+    font-family: '777Balsamtint';
+    font-size: 25px;
+}
