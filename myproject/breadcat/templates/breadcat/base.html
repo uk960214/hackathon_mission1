@@ -1,0 +1,19 @@
+{% load static %}
+<head>
+    <title>breadcat</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt=catbakery">
+            </a>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer></footer>
+</body>

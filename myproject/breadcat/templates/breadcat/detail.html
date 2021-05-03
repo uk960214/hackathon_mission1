@@ -1,17 +1,7 @@
+{% extends 'breadcat/base.html' %}
 {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>샌드위치1</title>
-    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
-</head>
-<body>
-    <header>
-        <h1>BreadCat</h1>
-    </header>
-    
-    <section class="main">
+{% block content %}
+    <main>
         <section class="ingredient top-bread">
             <div class="img-box">
                 <img src="{% static 'img/bread-top.png' %}" alt="sliced-bread">
@@ -32,15 +22,19 @@
                     {% endif %}
                 </div>
                 <div class="entry">
-                    <h5 class="title">
+                    <h5 class="question">
                         Question: {{ post.question }}
                     </h5>
-                    <p>{{post.date}}</p>
-                    <p class="content">
-                        Answer: {{post.answer|linebreaks}}
+                    <p class="answer">
+                        Answer: {{post.answer}}
                     </p>
+                    <p class="pub-date">
+                        {{post.date}}
+                    </p>
+
                     <input type="button" value="update">
                     <input type="button" value="delete">
+
                 </div>
             </section>
         {% endfor %}
@@ -51,7 +45,13 @@
             </div>
             <div class="entry dummy"></div>     
         </section>
-    </section>
-    <a href="{% url 'create' %}">Add ingredient</a>
+    </main>
     
-</body>
+        <div class="create">
+            <a class="create-btn" href="{% url 'create' %}">
+                <h1>+</h1>
+                <p>재료 추가</p>
+            </a>
+        </div>
+
+{% endblock %}

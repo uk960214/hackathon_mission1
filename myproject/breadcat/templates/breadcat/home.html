@@ -1,17 +1,73 @@
+{% extends 'breadcat/base.html' %}
 {% load static %}
-<head>
-    <title>breadcat</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-</head>
-<body>
-    <header></header>
-    <main>
-        <div id="top">고양이의 빵가게에 오신 것을 환영합니다</div>
-        <div id="container">
-            <section>
-                <a href=""><h3>샌드위치1</h3></a>
+{% block content %}
+    <div class="page-title">
+        <h1>고양이의 빵가게에 오신 것을 환영합니다</h1>
+        <p>몇 가지 질문에 답해주세요. 당신만을 위한 샌드위치를 만들어드릴게요. 야옹!</p>
+    </div>
+    <div class="container">
+        <a href="{% url 'detail' %}">
+            <section class="content-box">
+                <img src="{% static 'img/sandwich1' %}.png" alt='sandwich1'>
+                <h3>샌드위치1</h3>
+                <p>날짜</p>
             </section>
-        </div>
-    </main>
-    <footer></footer>
-</body>
+        </a>
+        <a href="{% url 'detail' %}">
+            <section class="content-box">
+                <img src="{% static 'img/sandwich2' %}.png" alt='sandwich2'>
+                <h3>샌드위치2</h3>
+                <p>날짜</p>
+            </section>
+        </a>
+        <a href="{% url 'detail' %}">
+            <section class="content-box">
+                <img src="{% static 'img/sandwich3' %}.png" alt='sandwich3'>
+                <h3>샌드위치3</h3>
+                <p>날짜</p>
+            </section>
+        </a>
+        <a href="{% url 'detail' %}">
+            <section class="content-box">
+                <img src="{% static 'img/sandwich4' %}.png" alt='sandwich4'>
+                <h3>샌드위치4</h3>
+                <p>날짜</p>
+            </section>
+        </a>
+        <a href="{% url 'detail' %}">
+            <section class="content-box">
+                <img src="{% static 'img/sandwich5' %}.png" alt='sandwich5'>
+                <h3>샌드위치5</h3>
+                <p>날짜</p>
+            </section>
+        </a>
+        <a href="{% url 'detail' %}">
+            <section class="content-box">
+                <img src="{% static 'img/sandwich4' %}.png" alt='sandwich4'>
+                <h3>샌드위치6</h3>
+                <p>날짜</p>
+            </section>
+        </a>
+        <a href="{% url 'detail' %}">
+            <section class="content-box">
+                <img src="{% static 'img/sandwich2' %}.png" alt='sandwich2'>
+                <h3>샌드위치7</h3>
+                <p>날짜</p>
+            </section>
+        </a>
+        <a href="{% url 'detail' %}">
+            <section class="content-box">
+                <img src="{% static 'img/sandwich1' %}.png" alt='sandwich1'>
+                <h3>샌드위치8</h3>
+                <p>날짜</p>
+            </section>
+        </a>
+        <a href="{% url 'detail' %}">
+            <section class="content-box">
+                <img src="{% static 'img/sandwich3' %}.png" alt='sandwich3'>
+                <h3>샌드위치9</h3>
+                <p>날짜</p>
+            </section>
+        </a>
+    </div>
+{% endblock %}
